@@ -1,0 +1,9 @@
+{
+  "name": "Jack Williamson",
+  "position": "Full Stack Developer",
+  "bio": "Specialized in modern web technologies with expertise in React, Node.js, and cloud infrastructure development.",
+  "photo": "/assets/images/team/jack-williamson.jpg",
+  "linkedin": "https://linkedin.com/in/jack-williamson",
+  "twitter": "https://twitter.com/jack_dev",
+  "order": 2
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Why Choose Us",
+  "headline": "Empower Your Business Every Step of the Way",
+  "highlight": "Every Step",
+  "description": "Whether it's optimizing IT infrastructure, enhancing cybersecurity, or driving digital transformation, we are committed to helping your business thrive in the digital age.",
+  "features": [
+    {
+      "icon": "fas fa-award",
+      "title": "Excellence in Solution",
+      "description": "We are committed to delivering innovative, reliable & scalable solutions that drive real business results."
+    },
+    {
+      "icon": "fas fa-users",
+      "title": "Difference We Deliver",
+      "description": "Our team of experts brings years of experience across various industries and cutting-edge technologies."
+    }
+  ]
+}

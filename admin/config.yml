@@ -1,0 +1,114 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  # Site Settings - Easy editing of all website content
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      # Contact Information
+      - label: "Contact Information"
+        name: "contact"
+        file: "_data/contact.json"
+        fields:
+          - {label: "Email Address", name: "email", widget: "string", default: "contact@otech-solutions.com"}
+          - {label: "Phone Number", name: "phone", widget: "string", default: "+1 (555) 123-4567"}
+          - {label: "Office Address", name: "address", widget: "text", default: "123 Tech Street, Digital City, TC 12345"}
+          - {label: "LinkedIn URL", name: "linkedin", widget: "string", required: false}
+          - {label: "Twitter URL", name: "twitter", widget: "string", required: false}
+          - {label: "Facebook URL", name: "facebook", widget: "string", required: false}
+          - {label: "Instagram URL", name: "instagram", widget: "string", required: false}
+
+      # Company Information
+      - label: "Company Information"
+        name: "company"
+        file: "_data/company.json"
+        fields:
+          - {label: "Company Name", name: "name", widget: "string", default: "OTech"}
+          - {label: "Tagline", name: "tagline", widget: "string", default: "IT Solutions for a Digital-First World"}
+          - {label: "About Description", name: "about", widget: "text", default: "We foster a culture of teamwork & creative problem-solving to deliver exceptional results for our clients."}
+          - {label: "Copyright Year", name: "copyright_year", widget: "string", default: "2025"}
+
+      # Hero Section
+      - label: "Hero Section"
+        name: "hero"
+        file: "_data/hero.json"
+        fields:
+          - {label: "Pre-Headline", name: "pre_headline", widget: "string", default: "IT Solutions for a Smarter Future"}
+          - {label: "Main Headline", name: "headline", widget: "string", default: "IT Solutions For A Digital-First World"}
+          - {label: "Highlighted Word", name: "highlight", widget: "string", default: "Digital-First"}
+          - {label: "Description", name: "description", widget: "text", default: "Empower your business with cutting-edge technology solutions tailored to meet your unique needs, from cloud computing to cybersecurity."}
+          - {label: "Primary Button Text", name: "primary_button", widget: "string", default: "Book a Free Consultation"}
+          - {label: "Secondary Button Text", name: "secondary_button", widget: "string", default: "Our Services"}
+          - label: "Statistics"
+            name: "stats"
+            widget: "list"
+            fields:
+              - {label: "Number", name: "number", widget: "string"}
+              - {label: "Label", name: "label", widget: "string"}
+              - {label: "Suffix", name: "suffix", widget: "string", required: false}
+
+      # About Section
+      - label: "About Section"
+        name: "about"
+        file: "_data/about.json"
+        fields:
+          - {label: "Section Title", name: "title", widget: "string", default: "Why Choose Us"}
+          - {label: "Main Headline", name: "headline", widget: "string", default: "Empower Your Business Every Step of the Way"}
+          - {label: "Highlighted Word", name: "highlight", widget: "string", default: "Every Step"}
+          - {label: "Description", name: "description", widget: "text", default: "Whether it's optimizing IT infrastructure, enhancing cybersecurity, or driving digital transformation, we are committed to helping your business thrive in the digital age."}
+          - label: "Features"
+            name: "features"
+            widget: "list"
+            fields:
+              - {label: "Icon", name: "icon", widget: "string", hint: "FontAwesome icon class (e.g., fas fa-award)"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+
+  # Team Members
+  - name: "team"
+    label: "Team Members"
+    folder: "_data/team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Position", name: "position", widget: "string"}
+      - {label: "Bio/Description", name: "bio", widget: "text"}
+      - {label: "Photo", name: "photo", widget: "image", required: false}
+      - {label: "LinkedIn URL", name: "linkedin", widget: "string", required: false}
+      - {label: "Twitter URL", name: "twitter", widget: "string", required: false}
+      - {label: "Display Order", name: "order", widget: "number", default: 1}
+
+  # Services
+  - name: "services"
+    label: "Services"
+    folder: "_data/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Service Title", name: "title", widget: "string"}
+      - {label: "Icon", name: "icon", widget: "string", hint: "FontAwesome icon class (e.g., fas fa-cloud)"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Display Order", name: "order", widget: "number", default: 1}
+
+  # News & Blog Posts
+  - name: "news"
+    label: "News & Blog Posts"
+    folder: "_data/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Category", name: "category", widget: "select", options: ["Tech", "Innovation", "Security", "News"]}
+      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Excerpt", name: "excerpt", widget: "text"}
+      - {label: "Read More URL", name: "url", widget: "string", required: false, hint: "Optional link to full article"}
+      - {label: "Featured Post", name: "featured", widget: "boolean", default: false}
+      - {label: "Display Order", name: "order", widget: "number", default: 1}

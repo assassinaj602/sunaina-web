@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTech - IT Solutions for a Digital-First World</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Tailwind Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'space': ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#6366f1',
+                        'secondary': '#0f172a',
+                        'accent': '#22d3ee',
+                        'dark': '#0f0f23',
+                        'darker': '#080815',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-darker text-white overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-darker/90 backdrop-blur-md border-b border-gray-800/50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2" data-aos="fade-right">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+                        <i class="fas fa-microchip text-white text-lg"></i>
+                    </div>
+                    <span class="text-2xl font-space font-bold">OTech</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8" data-aos="fade-down">
+                    <a href="#home" class="nav-link text-white hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-primary transition-colors">About</a>
+                    <a href="#services" class="nav-link text-gray-300 hover:text-primary transition-colors">Services</a>
+                    <a href="#team" class="nav-link text-gray-300 hover:text-primary transition-colors">Team</a>
+                    <a href="#news" class="nav-link text-gray-300 hover:text-primary transition-colors">News</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-primary transition-colors">Contact</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="hidden lg:block" data-aos="fade-left">
+                    <a href="#contact" class="bg-gradient-to-r from-primary to-accent px-6 py-3 rounded-lg text-white font-medium hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105">
+                        Get Started
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-white text-xl" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="lg:hidden fixed inset-0 bg-darker/95 backdrop-blur-md z-40 transform translate-x-full transition-transform duration-300" id="mobile-menu">
+            <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+                <a href="#home" class="mobile-nav-link text-white">Home</a>
+                <a href="#about" class="mobile-nav-link text-gray-300">About</a>
+                <a href="#services" class="mobile-nav-link text-gray-300">Services</a>
+                <a href="#team" class="mobile-nav-link text-gray-300">Team</a>
+                <a href="#news" class="mobile-nav-link text-gray-300">News</a>
+                <a href="#contact" class="mobile-nav-link text-gray-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-gradient-to-br from-darker via-dark to-secondary"></div>
+        <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="space-y-8" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="space-y-4">
+                        <p class="hero-pre-headline text-primary font-space font-medium tracking-wider uppercase">IT Solutions for a Smarter Future</p>
+                        <h1 class="hero-headline text-5xl lg:text-7xl font-space font-bold leading-tight">
+                            IT Solutions For A 
+                            <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                                Digital-First
+                            </span> 
+                            World
+                        </h1>
+                        <p class="hero-description text-xl text-gray-300 leading-relaxed max-w-lg">
+                            Empower your business with cutting-edge technology solutions tailored to meet your unique needs, from cloud computing to cybersecurity.
+                        </p>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="hero-primary-btn bg-gradient-to-r from-primary to-accent px-8 py-4 rounded-lg text-white font-medium hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105 text-center">
+                            Book a Free Consultation
+                        </a>
+                        <a href="#services" class="hero-secondary-btn border border-gray-600 px-8 py-4 rounded-lg text-white font-medium hover:bg-white hover:text-dark transition-all duration-300 text-center">
+                            Our Services
+                        </a>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="hero-stats grid grid-cols-3 gap-8 pt-8" data-aos="fade-up" data-aos-delay="500">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-accent">650+</div>
+                            <div class="text-gray-400 text-sm">Happy Clients</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-accent">85+</div>
+                            <div class="text-gray-400 text-sm">Total Projects</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-accent">12+</div>
+                            <div class="text-gray-400 text-sm">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hero Image/Animation -->
+                <div class="relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="relative w-full h-96 lg:h-[500px]">
+                        <!-- Placeholder for hero image/animation -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl backdrop-blur-sm border border-gray-800/50">
+                            <div class="flex items-center justify-center h-full">
+                                <div class="text-center space-y-4">
+                                    <div class="w-24 h-24 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto animate-pulse">
+                                        <i class="fas fa-rocket text-white text-3xl"></i>
+                                    </div>
+                                    <p class="text-gray-300"><!-- EDITOR: Replace this section with your hero image --></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" data-aos="fade-up" data-aos-delay="1000">
+            <div class="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- About Content -->
+                <div class="space-y-8" data-aos="fade-right">
+                    <div class="space-y-4">
+                        <p class="about-title text-primary font-space font-medium tracking-wider uppercase">Why Choose Us</p>
+                        <h2 class="about-headline text-4xl lg:text-5xl font-space font-bold leading-tight">
+                            Empower Your Business 
+                            <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                                Every Step
+                            </span> 
+                            of the Way
+                        </h2>
+                        <p class="about-description text-xl text-gray-300 leading-relaxed">
+                            Whether it's optimizing IT infrastructure, enhancing cybersecurity, or driving digital transformation, we are committed to helping your business thrive in the digital age.
+                        </p>
+                    </div>
+                    
+                    <!-- Features -->
+                    <div class="about-features space-y-6">
+                        <div class="flex items-start space-x-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-award text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Excellence in Solution</h3>
+                                <p class="text-gray-300">We are committed to delivering innovative, reliable & scalable solutions that drive real business results.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4" data-aos="fade-up" data-aos-delay="400">
+                            <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-users text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Difference We Deliver</h3>
+                                <p class="text-gray-300">Our team of experts brings years of experience across various industries and cutting-edge technologies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-4" data-aos="fade-up" data-aos-delay="600">
+                        <a href="#services" class="inline-flex items-center text-primary hover:text-accent transition-colors font-medium">
+                            Learn More About Us
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- About Image -->
+                <div class="relative" data-aos="fade-left" data-aos-delay="300">
+                    <!-- Technology Icons Grid -->
+                    <div class="grid grid-cols-4 gap-4 p-8 bg-gray-900/50 rounded-2xl backdrop-blur-sm border border-gray-800/50">
+                        <div class="text-center p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors">
+                            <i class="fab fa-aws text-3xl text-orange-400 mb-2"></i>
+                            <p class="text-xs text-gray-300">AWS</p>
+                        </div>
+                        <div class="text-center p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors">
+                            <i class="fab fa-microsoft text-3xl text-blue-400 mb-2"></i>
+                            <p class="text-xs text-gray-300">Azure</p>
+                        </div>
+                        <div class="text-center p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors">
+                            <i class="fab fa-google text-3xl text-green-400 mb-2"></i>
+                            <p class="text-xs text-gray-300">Google</p>
+                        </div>
+                        <div class="text-center p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors">
+                            <i class="fas fa-shield-alt text-3xl text-red-400 mb-2"></i>
+                            <p class="text-xs text-gray-300">Security</p>
+                        </div>
+                        <div class="text-center p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors">
+                            <i class="fas fa-database text-3xl text-purple-400 mb-2"></i>
+                            <p class="text-xs text-gray-300">Database</p>
+                        </div>
+                        <div class="text-center p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors">
+                            <i class="fas fa-network-wired text-3xl text-cyan-400 mb-2"></i>
+                            <p class="text-xs text-gray-300">Network</p>
+                        </div>
+                        <div class="text-center p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors">
+                            <i class="fab fa-docker text-3xl text-blue-500 mb-2"></i>
+                            <p class="text-xs text-gray-300">Docker</p>
+                        </div>
+                        <div class="text-center p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors">
+                            <i class="fab fa-linux text-3xl text-yellow-400 mb-2"></i>
+                            <p class="text-xs text-gray-300">Linux</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 text-center" data-aos="fade-up" data-aos-delay="500">
+                        <p class="text-gray-300">
+                            <!-- EDITOR: You can replace the technology icons above with your company's specific technologies -->
+                        </p>
+                        <h3 class="text-2xl font-semibold mt-4">Worked With More Than <span class="text-accent">100+</span> Technologies</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-900/30">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-primary font-space font-medium tracking-wider uppercase mb-4">Our Services</p>
+                <h2 class="text-4xl lg:text-5xl font-space font-bold leading-tight mb-6">
+                    Empowering Growth with
+                    <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                        Smart IT Services
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    We provide comprehensive IT solutions to help your business stay competitive in today's digital landscape.
+                </p>
+            </div>
+            
+            <!-- Services Grid -->
+            <div class="services-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Services will be loaded dynamically from CMS -->
+                <!-- Fallback content if CMS fails -->
+                <div class="group bg-gray-800/50 p-8 rounded-2xl backdrop-blur-sm border border-gray-700/50 hover:border-primary/50 transition-all duration-300 hover:transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-primary/25 transition-all duration-300">
+                        <i class="fas fa-cloud text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 group-hover:text-primary transition-colors">Cloud Computing Solutions</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Leverage the power of cloud to enhance scalability, flexibility, and performance. Our cloud computing solutions are secure and reliable.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center text-primary hover:text-accent transition-colors font-medium">
+                        Learn More
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-primary font-space font-medium tracking-wider uppercase mb-4">Our Team</p>
+                <h2 class="text-4xl lg:text-5xl font-space font-bold leading-tight mb-6">
+                    Dedicated Professionals,
+                    <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                        Proven Results
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Meet our expert team of professionals who are dedicated to delivering exceptional IT solutions and driving your business success.
+                </p>
+            </div>
+            
+            <!-- Team Grid -->
+            <div class="team-grid grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team members will be loaded dynamically from CMS -->
+                <!-- Fallback content if CMS fails -->
+                <div class="group text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative mb-6 overflow-hidden rounded-2xl">
+                        <div class="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                            <div class="w-24 h-24 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
+                                <i class="fas fa-user text-white text-3xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Loading...</h3>
+                    <p class="text-primary font-medium">Team Member</p>
+                    <p class="text-gray-400 text-sm mt-2">Loading team information...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News/Blog Section -->
+    <section id="news" class="py-20 bg-gray-900/30">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-primary font-space font-medium tracking-wider uppercase mb-4">Our Blog</p>
+                <h2 class="text-4xl lg:text-5xl font-space font-bold leading-tight mb-6">
+                    Latest Insights &
+                    <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                        Updates
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Stay up-to-date with the latest technology trends, insights, and news from our expert team.
+                </p>
+            </div>
+            
+            <!-- News Grid -->
+            <div class="news-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- News items will be loaded dynamically from CMS -->
+                <!-- Fallback content if CMS fails -->
+                <article class="group bg-gray-800/50 rounded-2xl overflow-hidden backdrop-blur-sm border border-gray-700/50 hover:border-primary/50 transition-all duration-300 hover:transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                    <div class="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-newspaper text-4xl text-gray-400"></i>
+                        </div>
+                        <div class="absolute top-4 left-4 bg-primary px-3 py-1 rounded-full text-sm font-medium">
+                            Loading...
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-400 mb-4">
+                            <span>Loading...</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                            Loading news articles...
+                        </h3>
+                        <p class="text-gray-300 mb-4 leading-relaxed">
+                            Please wait while we load the latest news and updates.
+                        </p>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="400">
+                <a href="#" class="bg-gradient-to-r from-primary to-accent px-8 py-4 rounded-lg text-white font-medium hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105">
+                    View All Articles
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-gradient-to-br from-darker via-dark to-secondary"></div>
+        <div class="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl lg:text-6xl font-space font-bold leading-tight mb-6">
+                    Transform Your Business
+                    <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                        Contact Us Today
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Ready to take your business to the next level? Get in touch with our expert team for a free consultation.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Contact Info -->
+                <div class="space-y-8" data-aos="fade-right">
+                    <div class="space-y-6">
+                        <!-- Email -->
+                        <div class="flex items-center space-x-4 p-6 bg-gray-800/50 rounded-2xl backdrop-blur-sm border border-gray-700/50">
+                            <div class="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center">
+                                <i class="fas fa-envelope text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-1">Email Address</h3>
+                                <!-- CMS: Email address will be loaded dynamically -->
+                                <p class="contact-email text-gray-300">contact@otech-solutions.com</p>
+                                <a href="mailto:contact@otech-solutions.com" class="text-primary hover:text-accent transition-colors text-sm">
+                                    Send us an email
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Phone -->
+                        <div class="flex items-center space-x-4 p-6 bg-gray-800/50 rounded-2xl backdrop-blur-sm border border-gray-700/50">
+                            <div class="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center">
+                                <i class="fas fa-phone text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-1">Phone Number</h3>
+                                <!-- CMS: Phone number will be loaded dynamically -->
+                                <p class="contact-phone text-gray-300">+1 (555) 123-4567</p>
+                                <a href="tel:+15551234567" class="text-primary hover:text-accent transition-colors text-sm">
+                                    Call us now
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Address -->
+                        <div class="flex items-center space-x-4 p-6 bg-gray-800/50 rounded-2xl backdrop-blur-sm border border-gray-700/50">
+                            <div class="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-1">Office Location</h3>
+                                <!-- CMS: Address will be loaded dynamically -->
+                                <p class="contact-address text-gray-300">123 Tech Street, Digital City, TC 12345</p>
+                                <p class="text-primary text-sm">Visit our office</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="pt-8" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <!-- EDITOR: Update social media links -->
+                            <a href="#" class="w-12 h-12 bg-gray-800/50 rounded-xl flex items-center justify-center text-gray-300 hover:bg-primary hover:text-white transition-all duration-300 hover:transform hover:scale-110">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-800/50 rounded-xl flex items-center justify-center text-gray-300 hover:bg-primary hover:text-white transition-all duration-300 hover:transform hover:scale-110">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-800/50 rounded-xl flex items-center justify-center text-gray-300 hover:bg-primary hover:text-white transition-all duration-300 hover:transform hover:scale-110">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-800/50 rounded-xl flex items-center justify-center text-gray-300 hover:bg-primary hover:text-white transition-all duration-300 hover:transform hover:scale-110">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact CTA -->
+                <div class="text-center lg:text-left" data-aos="fade-left" data-aos-delay="200">
+                    <div class="bg-gradient-to-br from-primary/10 to-accent/10 p-8 lg:p-12 rounded-3xl backdrop-blur-sm border border-gray-700/50">
+                        <div class="space-y-6">
+                            <div class="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mx-auto lg:mx-0">
+                                <i class="fas fa-handshake text-white text-3xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl lg:text-3xl font-bold mb-4">Ready to Get Started?</h3>
+                                <p class="text-gray-300 leading-relaxed mb-6">
+                                    Let's discuss how we can help transform your business with our cutting-edge IT solutions. Book a free consultation today!
+                                </p>
+                            </div>
+                            <div class="space-y-4">
+                                <a href="mailto:contact@otech-solutions.com" class="block w-full bg-gradient-to-r from-primary to-accent px-8 py-4 rounded-lg text-white font-medium hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105 text-center">
+                                    Book Free Consultation
+                                </a>
+                                <a href="tel:+15551234567" class="block w-full border border-gray-600 px-8 py-4 rounded-lg text-white font-medium hover:bg-white hover:text-dark transition-all duration-300 text-center">
+                                    Call Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker py-16 border-t border-gray-800/50">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div class="space-y-6" data-aos="fade-up">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
+                            <i class="fas fa-microchip text-white text-lg"></i>
+                        </div>
+                        <span class="company-name text-2xl font-space font-bold">OTech</span>
+                    </div>
+                    <p class="company-about text-gray-300 leading-relaxed">
+                        We foster a culture of teamwork & creative problem-solving to deliver exceptional results for our clients.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800/50 rounded-lg flex items-center justify-center text-gray-300 hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800/50 rounded-lg flex items-center justify-center text-gray-300 hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800/50 rounded-lg flex items-center justify-center text-gray-300 hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800/50 rounded-lg flex items-center justify-center text-gray-300 hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-semibold">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-gray-300 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-primary transition-colors">Our Services</a></li>
+                        <li><a href="#team" class="text-gray-300 hover:text-primary transition-colors">Our Team</a></li>
+                        <li><a href="#news" class="text-gray-300 hover:text-primary transition-colors">Latest News</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-semibold">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-gray-300 hover:text-primary transition-colors">Cloud Computing</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-primary transition-colors">Cybersecurity</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-primary transition-colors">IT Consulting</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-primary transition-colors">Network Security</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-semibold">Stay Updated</h3>
+                    <p class="text-gray-300">Subscribe to our newsletter for the latest tech insights.</p>
+                    <div class="space-y-3">
+                        <input type="email" placeholder="Enter your email" class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-primary focus:outline-none transition-colors">
+                        <button class="w-full bg-gradient-to-r from-primary to-accent px-4 py-3 rounded-lg text-white font-medium hover:shadow-lg hover:shadow-primary/25 transition-all duration-300">
+                            Subscribe Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="pt-8 border-t border-gray-800/50" data-aos="fade-up">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <p class="text-gray-400 text-center md:text-left">
+                        Copyright ©2025 OTech. All Rights Reserved
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms & Conditions</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center text-white opacity-0 visibility-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cms-loader.js"></script>
+</body>
+</html>

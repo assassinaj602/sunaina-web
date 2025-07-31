@@ -1,0 +1,37 @@
+{
+  "name": "otech-website",
+  "version": "1.0.0",
+  "description": "Modern IT Solutions Static Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server --port=3000 --open=index.html",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "netlify deploy --prod --dir=.",
+    "preview": "netlify deploy --dir=."
+  },
+  "keywords": [
+    "static-website",
+    "html",
+    "css",
+    "javascript",
+    "tailwind",
+    "responsive",
+    "it-solutions"
+  ],
+  "author": "GitHub Copilot",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/otech-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/otech-website/issues"
+  },
+  "homepage": "https://github.com/yourusername/otech-website#readme"
+}

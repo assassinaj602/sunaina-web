@@ -1,0 +1,25 @@
+{
+  "pre_headline": "IT Solutions for a Smarter Future",
+  "headline": "IT Solutions For A Digital-First World",
+  "highlight": "Digital-First",
+  "description": "Empower your business with cutting-edge technology solutions tailored to meet your unique needs, from cloud computing to cybersecurity.",
+  "primary_button": "Book a Free Consultation",
+  "secondary_button": "Our Services",
+  "stats": [
+    {
+      "number": "650",
+      "label": "Happy Clients",
+      "suffix": "+"
+    },
+    {
+      "number": "85",
+      "label": "Total Projects",
+      "suffix": "+"
+    },
+    {
+      "number": "12",
+      "label": "Years Experience",
+      "suffix": "+"
+    }
+  ]
+}
