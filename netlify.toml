@@ -2,12 +2,6 @@
   publish = "."
   command = "echo 'No build command needed for static site'"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Role = ["admin"]}
-
 # Security headers
 [[headers]]
   for = "/*"
@@ -38,4 +32,10 @@
 [[redirects]]
   from = "/admin/*"
   to = "/admin/index.html"
+  status = 200
+
+# Handle SPA routing - this should be LAST
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
   status = 200
