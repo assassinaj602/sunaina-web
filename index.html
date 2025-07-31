@@ -96,51 +96,58 @@
 
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center relative overflow-hidden">
+        <!-- Floating Shapes Background -->
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        
         <!-- Background Elements -->
         <div class="absolute inset-0 bg-gradient-to-br from-darker via-dark to-secondary"></div>
-        <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl morphing-blob"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl morphing-blob"></div>
         
         <div class="container mx-auto px-6 relative z-10">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <!-- Hero Content -->
                 <div class="space-y-8" data-aos="fade-right" data-aos-duration="1000">
                     <div class="space-y-4">
-                        <p class="hero-pre-headline text-primary font-space font-medium tracking-wider uppercase">IT Solutions for a Smarter Future</p>
-                        <h1 class="hero-headline text-5xl lg:text-7xl font-space font-bold leading-tight">
+                        <p class="hero-pre-headline text-primary font-space font-medium tracking-wider uppercase" data-aos="fade-up" data-aos-delay="200">IT Solutions for a Smarter Future</p>
+                        <h1 class="hero-headline text-5xl lg:text-7xl font-space font-bold leading-tight" data-aos="fade-up" data-aos-delay="400">
                             IT Solutions For A 
-                            <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                            <span class="text-shimmer bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                                 Digital-First
                             </span> 
                             World
                         </h1>
-                        <p class="hero-description text-xl text-gray-300 leading-relaxed max-w-lg">
+                        <p class="hero-description text-xl text-gray-300 leading-relaxed max-w-lg" data-aos="fade-up" data-aos-delay="600">
                             Empower your business with cutting-edge technology solutions tailored to meet your unique needs, from cloud computing to cybersecurity.
                         </p>
                     </div>
                     
                     <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#contact" class="hero-primary-btn bg-gradient-to-r from-primary to-accent px-8 py-4 rounded-lg text-white font-medium hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105 text-center">
+                    <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="800">
+                        <a href="#contact" class="hero-primary-btn btn-primary magnetic hover-lift">
                             Book a Free Consultation
                         </a>
-                        <a href="#services" class="hero-secondary-btn border border-gray-600 px-8 py-4 rounded-lg text-white font-medium hover:bg-white hover:text-dark transition-all duration-300 text-center">
+                        <a href="#services" class="hero-secondary-btn border border-gray-600 px-8 py-4 rounded-lg text-white font-medium hover:bg-white hover:text-dark transition-all duration-300 text-center magnetic hover-lift">
                             Our Services
                         </a>
                     </div>
                     
                     <!-- Stats -->
-                    <div class="hero-stats grid grid-cols-3 gap-8 pt-8" data-aos="fade-up" data-aos-delay="500">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-accent">650+</div>
+                    <div class="hero-stats grid grid-cols-3 gap-8 pt-8" data-aos="fade-up" data-aos-delay="1000">
+                        <div class="text-center" data-fade>
+                            <div class="counter text-3xl font-bold" data-count="650" data-suffix="+">650+</div>
                             <div class="text-gray-400 text-sm">Happy Clients</div>
                         </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-accent">85+</div>
+                        <div class="text-center" data-fade>
+                            <div class="counter text-3xl font-bold" data-count="85" data-suffix="+">85+</div>
                             <div class="text-gray-400 text-sm">Total Projects</div>
                         </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-accent">12+</div>
+                        <div class="text-center" data-fade>
+                            <div class="counter text-3xl font-bold" data-count="12" data-suffix="+">12+</div>
                             <div class="text-gray-400 text-sm">Years Experience</div>
                         </div>
                     </div>
@@ -149,14 +156,17 @@
                 <!-- Hero Image/Animation -->
                 <div class="relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
                     <div class="relative w-full h-96 lg:h-[500px]">
-                        <!-- Placeholder for hero image/animation -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl backdrop-blur-sm border border-gray-800/50">
+                        <!-- Enhanced Hero Visual -->
+                        <div class="absolute inset-0 glass-effect rounded-2xl hover-glow service-card">
                             <div class="flex items-center justify-center h-full">
-                                <div class="text-center space-y-4">
-                                    <div class="w-24 h-24 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto animate-pulse">
-                                        <i class="fas fa-rocket text-white text-3xl"></i>
+                                <div class="text-center space-y-6">
+                                    <div class="service-icon w-32 h-32 mx-auto">
+                                        <i class="fas fa-rocket text-white text-5xl"></i>
                                     </div>
-                                    <p class="text-gray-300"><!-- EDITOR: Replace this section with your hero image --></p>
+                                    <div class="space-y-3">
+                                        <h3 class="text-2xl font-semibold gradient-text">Innovation Driven</h3>
+                                        <p class="text-gray-300">Cutting-edge technology solutions</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -165,9 +175,9 @@
             </div>
         </div>
         
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" data-aos="fade-up" data-aos-delay="1000">
-            <div class="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center">
+        <!-- Enhanced Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 magnetic" data-aos="fade-up" data-aos-delay="1200">
+            <div class="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center hover-glow transition-smooth">
                 <div class="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
             </div>
         </div>
